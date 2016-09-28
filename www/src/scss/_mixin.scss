@@ -1,0 +1,6 @@
+//set conSize
+@mixin conSize($width-size,$height-size,$con-background:#ffffff){
+    width:$width-size;
+    height: $height-size;
+    background-color:$con-background;
+};

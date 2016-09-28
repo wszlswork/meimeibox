@@ -1,0 +1,21 @@
+//set container
+#container{
+  @include conSize($container-width,auto);
+  margin: 0 auto;
+
+  //设置header
+  #header{
+    @include conSize($container-width,$header-height);
+    background: url($header-url) no-repeat;
+    position: absolute;
+    .closeheader{
+      @include conSize($header-closeheader-width,$header-closeheader-height);
+      opacity: 0;
+      filter: alpha(opacity=0);
+      position: absolute;
+      right:$closeheader-right;
+      top:$closeheader-top;
+      pointer: hand;
+    }
+  }
+}
