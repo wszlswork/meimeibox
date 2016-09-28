@@ -1,21 +1,279 @@
 //set container
+
 #container{
   @include conSize($container-width,auto);
   margin: 0 auto;
-
-  //设置header
-  #header{
-    @include conSize($container-width,$header-height);
-    background: url($header-url) no-repeat;
-    position: absolute;
-    .closeheader{
-      @include conSize($header-closeheader-width,$header-closeheader-height);
-      opacity: 0;
-      filter: alpha(opacity=0);
-      position: absolute;
-      right:$closeheader-right;
-      top:$closeheader-top;
-      pointer: hand;
+}
+//advanced
+#ad{
+  position: absolute;
+  left: 50px;
+  top: 75px;
+  z-index: 20;
+  ul{
+    li{
+      margin-bottom:15px; ;
     }
   }
 }
+
+//set header
+#header{
+  @include conSize($container-width,$header-height);
+  background: url($header-url) no-repeat;
+  position:relative;
+  .closeheader{
+    @include conSize($header-closeheader-width,$header-closeheader-height);
+    @include conOpacity(0);
+    position: absolute;
+    right:$closeheader-right;
+    top:$closeheader-top;
+    @extend %hand;
+  }
+}
+//set top
+#top{
+  @include conSize($container-width,$top-height);
+  border-bottom: 1px solid #dcdcdc;
+  p{
+    @include conFloatLeft();
+    border-left:1px solid #dcdcdc;
+  }
+  .date{
+    @include conSize($top-date-width,$top-height,$signin-span);
+    margin-left: 97px;
+  }
+  .signin{
+
+    color: $signin-color;
+    line-height:$top-height;
+    span{
+      color:$signin-span;
+    }
+  }
+  ul {
+    height:$top-height;
+    @include conFloatRight(88px);
+    border-right: 1px solid #dcdcdc;
+    li{
+      @include conFloatLeft();
+      border-left: 1px solid #dcdcdc;
+      a {
+        @extend %inline-block;
+        padding: 0 15px;
+        line-height: $top-height;
+
+      }
+      img{
+        @include conFloatLeft();
+      }
+    }
+  }
+}
+
+#search{
+  @include conSize($container-width,$search-height);
+  position: relative;
+  .logo{
+    @include conSize($logo-width,$logo-height);
+    @include  conFloatLeft($logo-marginLeft,$logo-marginTop);
+    background: url($logo-url) no-repeat;
+  }
+  .searchtext{
+    @include conSize($searchtext-width,$searchtext-height);
+    @include conFloatLeft($searchtext-marginLeft,$searchtext-marginTop);
+    border-color: $color-black;
+    color:$searchtext-color;
+    text-indent: 1em;
+    font-size: $font-larger;
+    background: url($searchtext-url) right no-repeat;
+  }
+  .btnsearch{
+    @include conSize($btnsearch-width,$searchtext-height);
+    position: absolute;
+    top:$btnsearch-top;
+    left:$btnsearch-left;
+    @include conOpacity(0);
+    @extend %hand;
+  }
+  ul{
+    @include conSize($searchtext-width,$searchtul-height);
+    @include conFloatLeft($searchtext-marginLeft);
+    li{
+      @include conFloatLeft();
+      a {
+        @extend %inline-block;
+        line-height: $searchtul-height;
+        margin-right: 10px;
+      }
+    }
+  }
+  .email{
+    font-size: $font-larger;
+    position: relative;
+    top:45px;
+    left:40px;
+  }
+  .sub{
+    @include conSize(145px,35px);
+    position: relative;
+    top:10px;
+    left:118px;
+  }
+  .submit{
+    @include conSize(45px,36px,#eeeeee);
+    color: $color-black;
+    position: relative;
+    border: none;
+    top:60px;
+    left:-113px;
+  }
+  .invite{
+    color: $searchtext-color;
+    position: absolute;
+    bottom: 32px;
+    right: 150px;
+  }
+}
+//menu
+#menu{
+  @include conSize($container-width,$menu-height);
+  position: relative;
+  ul{
+    height:$menu-height;
+    @include conFloatLeft(140px);
+    background-color: $signin-color;
+    li{
+      position: relative;
+      @include conFloatLeft();
+      height:$menu-height;
+      line-height: $menu-height;
+      a{
+        @extend %inline-block;
+        color: $color-white;
+        font:bold $font-larger "宋体";
+        line-height: $menu-height;
+        padding:0 12px;
+        &:hover{
+          color: #ff4490;
+        }
+      }
+      .hot {
+        position:absolute ;
+        left:0;
+        top:52px;
+        height: 208px;
+        z-index: 10;
+        ul{
+          margin: 0;
+          height: 208px;
+        }
+
+        li{
+          z-index: 10;
+          width: 115px;
+          clear: both;
+          background-color: $signin-color;
+        }
+        .widther{
+          li{
+           width: 152px;
+          }
+
+        }
+        display: none;
+      }
+    }
+    .bubble{
+      position:absolute;
+      top:-15px;
+      left: 24px;
+    }
+    .bubblelast{
+      position:absolute;
+      top:-15px;
+      left: -5px;
+    }
+  }
+}
+#friendlink{
+  @include conSize($container-width,233px);
+  background: url("../images/friend-bck.jpg" ) repeat;
+}
+#friendlink .link{
+  @include conSize(960px,192px);
+  @include conFloatLeft(130px,30px);
+  ul{
+    margin-top: 10px;
+    float: left;
+    text-align: center;
+    li{
+      a{
+      padding: 0 30px;
+      font:bold 12px/40px "宋体";
+      color: #333333;
+        &:hover{
+          color:red;
+        }
+      }
+    }
+  }
+  .service{
+    @include conSize(180px,192px);
+    @include conFloatLeft(40px);
+    p{
+      font:bold 12px/22px "宋体";
+      color: #333333;
+      span{
+        font-weight: normal;
+      }
+    }
+    .contact{
+      margin-top: 10px;
+      margin-left: 40px;
+    }
+  }
+  .code1{
+      position: relative;
+      top:20px;
+      left:10px;
+    }
+  .code2{
+    position: relative;
+    top:20px;
+    left:105px;
+  }
+}
+//footer
+#footer{
+  @include conSize($container-width,95px,#ebebeb);
+  position: relative;
+  .copy{
+    @include conFloatLeft(150px,23px);
+    color: #888888;
+  }
+  ul{
+    position: absolute;
+    bottom: 33px;
+    left: 405px;
+    .empty{
+      width: 30px;
+      background-color: $color-white;
+      border: none;
+    }
+    li{
+      @include conFloatLeft();
+      border:1px solid #686868;
+      height: 14px;
+      padding: 0 5px;
+      margin-right: 5px;
+      color: #313131;
+    }
+  }
+  .last{
+    position: absolute;
+    bottom:28px;
+    right: 110px;
+  }
+}
+

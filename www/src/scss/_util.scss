@@ -1,18 +1,8 @@
-//clearstyle
-*{
-  margin: 0;
-  padding: 0;
+%inline-block{
+  display: inline-block;
+  color:#000;
 }
-body{
-  font-size: $fontsize-normal;
-}
-img{
-  border: none;
-}
-ul li{
-  list-style: none;
+%hand{
+  cursor: pointer;
 }
 
-a{
-  text-decoration: none;
-}

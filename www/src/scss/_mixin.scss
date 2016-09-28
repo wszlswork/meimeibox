@@ -4,3 +4,17 @@
     height: $height-size;
     background-color:$con-background;
 };
+//set float margin
+@mixin conFloatLeft($marginleft:0,$margintop:0){
+    float: left;
+    margin-left:$marginleft;
+    margin-top: $margintop;
+}@mixin conFloatRight($marginright:0,$margintop:0){
+    float: right;
+    margin-right:$marginright;
+    margin-top: $margintop;
+}
+@mixin conOpacity($level){
+    opacity: $level;
+    filter: alpha(opacity=$level*100);
+}

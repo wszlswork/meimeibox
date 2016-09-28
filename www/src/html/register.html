@@ -4,17 +4,226 @@
     <meta charset="UTF-8">
     <title>免费注册</title>
     <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/register.css" rel="stylesheet" type="text/css"/>
    <script src="../Javascript/lib/jquery-1.8.3.js" type="text/javascript"></script>
 </head>
 <body>
     <div id="container">
+        <!--左侧广告-->
+        <div id="ad">
+            <ul>
+                <li><img src="../images/register.jpg"/></li>
+                <li><img src="../images/PONY.jpg"/></li>
+                <li><img src="../images/gift.jpg"/></li>
+                <li><img src="../images/preference.jpg"/></li>
+            </ul>
+        </div>
         <!--头部-->
         <div id="header">
             <!--关闭头部-->
             <div class="closeheader"></div>
         </div>
+        <!--头部签到-->
+        <div id="top">
+            <p class="date"></p>
+            <p class="signin">
+                <a href="#"><span>[每日签到]</span></a>
+                连续10天送5元代金券
+            </p>
+            <ul>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">美妆箱</a></li>
+                <li class="bag"><a href="#"><img src="../images/top-bag.jpg"/>购物车</a></li>
+            </ul>
+        </div>
+        <!--search搜索框-->
+        <div id="search">
+            <div class="logo"></div>
+            <input type="text" class="searchtext" value="搜索!"/>
+            <div class="btnsearch"></div>
+            <ul>
+                <li><a href="#">PONY</a></li>
+                <li><a href="#">雪花秀</a></li>
+                <li><a href="#">礼盒</a></li>
+                <li><a href="#">眼影</a></li>
+                <li><a href="#">保湿</a></li>
+                <li><a href="#">悦诗风铃</a></li>
+                <li><a href="#">面膜</a></li>
+                <li><a href="#">补水</a></li>
+                <li><a href="#">BB</a></li>
+            </ul>
+            <p class="email">订阅邮件</p>
+            <input class="sub" type="text">
+            <input type="submit" class="submit">
+            <p class="invite"><b>邀请好友，即获得￥40元返现!</b></p>
+        </div>
+        <!--菜单-->
+        <div id="menu">
+            <ul>
+                <li><a href="#">美美箱主页</a></li>
+                <li class="more">
+                    <a href="#">美美爆款 <img src="../images/down.jpg"/></a><img class="bubble" src="../images/Hot.jpg"/>
+                    <div class="hot">
+                        <ul>
+                            <li><a href="#">礼盒</a></li>
+                            <li><a href="#">眼影</a></li>
+                            <li><a href="#">保湿</a></li>
+                            <li><a href="#">悦诗风铃</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">每日特惠 </a><img class="bubble" src="../images/New.jpg"/></li>
+                <li class="more"><a href="#">美美妆  <img src="../images/down.jpg"/></a>
+                    <div class="hot">
+                        <ul>
+                            <li><a href="#">BB</a></li>
+                            <li><a href="#">面膜</a></li>
+                            <li><a href="#">保湿</a></li>
+                            <li><a href="#">睫毛膏</a></li>
+                        </ul>
+                    </div></li>
+                <li class="more"><a href="#">韩国人气品牌 <img src="../images/down.jpg"/></a>
+                    <div class="hot widther">
+                        <ul>
+                            <li><a href="#">韩流</a></li>
+                            <li><a href="#">韩束</a></li>
+                            <li><a href="#">兰芝</a></li>
+                            <li><a href="#">兰蔻</a></li>
+                        </ul>
+                    </div></li>
+                <li><a href="#">超特价</a></li>
+                <li><a href="#">新产品</a></li>
+                <li><a href="#">PONY</a><img class="bubblelast" src="../images/Hot.jpg"/></li>
+                <li><a href="#">韩国美妆商城  <img src="../images/down.jpg"/></a></li>
+            </ul>
+        </div>
+        <!--main-->
+        <div id="main">
+            <h1>免费注册</h1>
+            <h2>个人信息</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>邮箱地址 <span>*</span></p>
+                    </td>
+                    <td>
+                        <p>手机号码 <span>*</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="email">
+                    </td>
+                    <td>
+                        <input type="text" id="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>设置密码 <span>*</span></p>
+                    </td>
+                    <td>
+                        <p>确认密码 <span>*</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" id="password">
+                    </td>
+                    <td>
+                        <input type="password" id="surepassword">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>推荐人邮件 <span>*</span></p>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="referer">
+                    </td>
+                    <td>
+                        <input type="checkbox" id="checkbox">  订阅邮件
+                    </td>
+            </tr>
+                <tr>
+                    <td>
+                        <p>活动码（选填） <span>*</span></p>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="activecode">
+                    </td>
 
-
+            </table>
+            <div class="back">
+                <button>&lt;</button>  返回
+            </div>
+            <div class="submittable">
+                <p>*必填字段</p>
+                <input type="submit">
+            </div>
+            <div class="testing">
+                <p>11-2=</p>
+                <input type="text">
+                <input type="button" class="button" value="输入验证码">
+            </div>
+        </div>
+        <!--友情链接-->
+        <div id="friendlink">
+            <div class="link">
+                <ul>
+                    <li><a href="#">关于美美箱</a> </li>
+                    <li><a href="#">韩国No.1美妆电商</a> </li>
+                    <li><a href="#">媒体报道</a> </li>
+                    <li><a href="#">100%正品保证</a> </li>
+                </ul>
+                <ul>
+                    <li><a href="#">新手指南</a> </li>
+                    <li><a href="#">购买须知</a> </li>
+                    <li><a href="#">退换货政策</a> </li>
+                    <li><a href="#">常见问题</a> </li>
+                </ul>
+                <ul>
+                    <li><a href="#">联系美美箱</a> </li>
+                    <li><a href="#">业务洽谈</a> </li>
+                    <li><a href="#">加入我们</a> </li>
+                    <li><a href="#">告消费者书</a> </li>
+                </ul>
+                <div class="service">
+                    <p class="contact">联系客服</p>
+                    <p>客服时间</p>
+                    <p><span>周一~周五 9:00-21:00</span></p>
+                    <p><span>周六~周日 9:00-18:00</span></p>
+                    <p>客服热线</p>
+                    <p><span>400-720-9967</span></p>
+                    <p>客服邮箱</p>
+                    <p><span>service@nihao.memebox.com</span></p>
+                </div>
+                <img src="../images/code1.jpg" class="code1"/>
+                <img src="../images/code2.jpg" class="code2"/>
+            </div>
+        </div>
+        <!--足部-->
+        <div id="footer">
+            <p class="copy">
+                &copy; 2015 MeMebox Corporation .All Rights Reserve.
+            </p>
+            <ul>
+                <li class="empty"></li>
+                <li>上海原照网络科技有限公司</li>
+                <li>上海市静安区海防路555号同乐坊11楼401</li>
+                <li>泸ICP备14043341号</li>
+            </ul>
+            <img src="../images/CNZZCOM.jpg" class="last">
+        </div>
     </div>
 </body>
-</html>
+<script src="../Javascript/js/common.js"></script>
