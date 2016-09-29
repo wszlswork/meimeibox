@@ -83,6 +83,7 @@
     @include conSize($searchtext-width,$searchtext-height);
     @include conFloatLeft($searchtext-marginLeft,$searchtext-marginTop);
     border-color: $color-black;
+    line-height:$searchtext-height ;
     color:$searchtext-color;
     text-indent: 1em;
     font-size: $font-larger;
@@ -121,7 +122,7 @@
     left:118px;
   }
   .submit{
-    @include conSize(45px,36px,#eeeeee);
+    @include conSize(70px,36px,#eeeeee);
     color: $color-black;
     position: relative;
     border: none;

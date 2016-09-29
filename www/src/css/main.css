@@ -135,6 +135,7 @@ a {
   margin-left: 46px;
   margin-top: 53px;
   border-color: #000000;
+  line-height: 34px;
   color: #ff4490;
   text-indent: 1em;
   font-size: 18px;
@@ -182,7 +183,7 @@ a {
   left: 118px;
 }
 #search .submit {
-  width: 45px;
+  width: 70px;
   height: 36px;
   background-color: #eeeeee;
   color: #000000;

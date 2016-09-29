@@ -1,0 +1,114 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+}
+
+img {
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main {
+  width: 1222px;
+  height: 625px;
+  background-color: #ffffff;
+  position: relative;
+}
+#main h1 {
+  margin-left: 140px;
+  margin-top: 50px;
+}
+#main h2 {
+  width: 938px;
+  height: 40px;
+  background-color: #ffffff;
+  margin-left: 140px;
+  text-indent: 10px;
+  line-height: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#main table {
+  float: left;
+  margin-left: 153px;
+  margin-top: 5px;
+  font: bold 12px/20px "瀹嬩綋";
+  color: #000000;
+}
+#main table td {
+  padding-right: 26px;
+}
+#main table p span {
+  font: bold 12px/30px "瀹嬩綋";
+  color: #ff243d;
+}
+#main table input {
+  width: 252px;
+  height: 34px;
+  background-color: #ffffff;
+}
+#main table #checkbox {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+}
+#main .back {
+  position: absolute;
+  width: 75px;
+  height: 37px;
+  background-color: #ffffff;
+  line-height: 37px;
+  bottom: 83px;
+  left: 150px;
+}
+#main .back button {
+  width: 37px;
+  height: 37px;
+  background-color: #f5f5f5;
+  border: none;
+}
+#main .submittable {
+  width: 170px;
+  height: 75px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 160px;
+  bottom: 72px;
+}
+#main .submittable p {
+  text-align: right;
+  color: #ff4490;
+}
+#main .submittable input {
+  width: 170px;
+  height: 43px;
+  background-color: #f5f5f5;
+  color: #000000;
+}
+#main .testing {
+  margin-top: 20px;
+}
+#main .testing input {
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+}
+#main .testing .button {
+  width: 85px;
+  height: 38px;
+  background-color: #f5f5f5;
+  border: 1px solid #888888;
+}
+
+/*# sourceMappingURL=register.css.map */
