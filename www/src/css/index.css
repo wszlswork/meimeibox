@@ -1,3 +1,7 @@
+#banner ol p {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +21,163 @@ ul li {
 
 a {
   text-decoration: none;
+}
+
+#banner {
+  width: 940px;
+  height: 310px;
+  background-color: #ffffff;
+  position: relative;
+  margin-left: 140px;
+  overflow: hidden;
+}
+#banner ul {
+  position: absolute;
+  width: 5640px;
+  height: 310px;
+  background-color: #ffffff;
+}
+#banner ul li {
+  float: left;
+}
+#banner .point {
+  width: 180px;
+  height: 20px;
+  background-color: #ffffff;
+  background: none;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -90px;
+}
+#banner .point .current {
+  background-color: #ff243d;
+}
+#banner .point span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+#banner ol {
+  position: relative;
+  width: 140px;
+  height: 310px;
+  background-color: #000000;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  list-style: none;
+}
+#banner ol li {
+  color: #ffffff;
+  line-height: 35px;
+  text-indent: 2em;
+}
+#banner ol li:hover {
+  background-color: #ffffff;
+  color: #ff243d;
+}
+#banner ol div {
+  width: 140px;
+  height: 310px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 140px;
+  top: 0;
+  display: none;
+}
+#banner ol p {
+  color: #000000;
+  line-height: 35px;
+  text-indent: 2em;
+}
+#banner ol p:hover {
+  color: #ff243d;
+}
+
+#title {
+  width: 1222px;
+  height: 50px;
+  background-color: #ffffff;
+}
+#title p {
+  font: bold 32px/50px black;
+  text-align: center;
+}
+
+#newPerson {
+  width: 940px;
+  height: 424px;
+  background-color: #ffffff;
+  margin-left: 140px;
+  background: url("../images/newPerson.jpg");
+  position: relative;
+}
+#newPerson button {
+  width: 132px;
+  height: 35px;
+  background-color: #fe359b;
+  position: absolute;
+  border: none;
+  left: 108px;
+  bottom: 80px;
+  color: #ffffff;
+}
+#newPerson p {
+  position: absolute;
+  right: 230px;
+  bottom: 35px;
+}
+
+.activity {
+  position: relative;
+  width: 940px;
+  height: 310px;
+  background-color: #ffffff;
+  margin-left: 140px;
+  margin-top: 30px;
+  text-align: center;
+}
+.activity p {
+  color: #8d8d8d;
+  line-height: 30px;
+  margin-top: 5px;
+}
+.activity h1 {
+  color: #2a2a2a;
+}
+.activity h3 {
+  margin-top: 20px;
+  color: #fb3405;
+}
+.activity .left {
+  width: 465px;
+  height: 150px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 145px;
+}
+.activity .right {
+  width: 465px;
+  height: 150px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 145px;
+}
+.activity button {
+  display: block;
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  background-color: #ffffff;
+  background: none;
+  left: 54px;
+  bottom: 32px;
+  border: none;
 }
 
 /*# sourceMappingURL=index.css.map */

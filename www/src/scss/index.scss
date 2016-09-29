@@ -1,1 +1,131 @@
 @import "variables","util","type","mixin";
+#banner{
+  @include conSize(940px,310px);
+  position: relative;
+  margin-left:140px;
+  overflow: hidden;
+  ul {
+    position: absolute;
+    @include conSize(5640px,310px);
+    li{
+      float: left;
+    }
+  }
+  .point{
+    @include conSize(180px,20px);
+    background: none;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -90px;
+    .current{
+      background-color: #ff243d;
+    }
+    span{
+      display: inline-block;
+     width: 15px;
+      height: 15px;
+      background-color: #fff;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+
+  }
+  ol{
+    position: relative;
+    @include conSize(140px,310px,#000000);
+    @include conOpacity(0.7);
+    list-style: none;
+    li{
+      color: #ffffff;
+      line-height: 35px;
+      text-indent: 2em;
+    }
+    li:hover{
+      background-color: #ffffff;
+      color: #ff243d;
+    }
+    div{
+      @include conSize(140px,310px,#ffffff);
+      position: absolute;
+      left: 140px;
+      top: 0;
+      display: none;
+    }
+    p{
+      color: #000000;
+      line-height: 35px;
+      text-indent: 2em;
+      @extend %hand;
+    }
+    p:hover{
+      color: #ff243d;
+    }
+  }
+}
+#title{
+  @include conSize($container-width,50px);
+  p{
+    font: bold 32px/50px black;
+    text-align: center;
+  }
+}
+#newPerson{
+  @include conSize(940px,424px);
+  margin-left: 140px;
+  background: url("../images/newPerson.jpg");
+  position: relative;
+  button{
+    @include conSize(132px,35px,#fe359b);
+    position: absolute;
+    border: none;
+    left:108px;
+    bottom : 80px;
+    color: #ffffff;
+  }
+  p{
+    position: absolute;
+    right: 230px;
+    bottom: 35px;
+  }
+}
+.activity{
+  position: relative;
+  @include conSize(940px,310px);
+  margin-left:140px;
+  margin-top: 30px;
+  text-align: center;
+  p{
+    color: #8d8d8d;
+    line-height: 30px;
+    margin-top: 5px;
+  }
+  h1{
+    color: #2a2a2a;
+  }
+  h3{
+    margin-top: 20px;
+    color: #fb3405;
+  }
+  .left{
+    @include conSize(465px,150px);
+    position: absolute;
+    left: 0;
+    top: 145px;
+  }
+  .right{
+    @include conSize(465px,150px);
+    position: absolute;
+    right: 0;
+    top: 145px;
+  }
+  button{
+    display: block;
+    position: absolute;
+    @include conSize(170px,40px);
+    background: none;
+    left: 54px;
+    bottom: 32px;
+    border: none;
+  }
+}
