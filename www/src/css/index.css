@@ -180,4 +180,18 @@ a {
   border: none;
 }
 
+.discount {
+  width: 940px;
+  height: 850px;
+  margin-left: 140px;
+}
+.discount ul li {
+  float: left;
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 463px;
+  height: 187px;
+  background-color: #ffffff;
+}
+
 /*# sourceMappingURL=index.css.map */
