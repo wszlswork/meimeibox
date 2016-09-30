@@ -129,3 +129,16 @@
     border: none;
   }
 }
+.discount{
+  width: 940px;
+  height: 850px;
+  margin-left: 140px;
+  ul{
+    li{
+      float: left;
+      margin-left: 5px;
+      margin-top: 10px;
+      @include conSize(463px,187px);
+    }
+  }
+}
