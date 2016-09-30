@@ -63,12 +63,15 @@
     }
   }
 }
-#title{
+  .title{
   @include conSize($container-width,50px);
   p{
     font: bold 32px/50px black;
     text-align: center;
   }
+    .underline{
+      border-bottom:1px solid #eeeeee;
+    }
 }
 #newPerson{
   @include conSize(940px,424px);
@@ -95,6 +98,7 @@
   margin-left:140px;
   margin-top: 30px;
   text-align: center;
+  @extend %hand;
   p{
     color: #8d8d8d;
     line-height: 30px;
@@ -131,7 +135,7 @@
 }
 .discount{
   width: 940px;
-  height: 850px;
+  height: 810px;
   margin-left: 140px;
   ul{
     li{
@@ -139,6 +143,77 @@
       margin-left: 5px;
       margin-top: 10px;
       @include conSize(463px,187px);
+    }
+  }
+}
+
+//list
+.list{
+  @include conSize(940px,1450px);
+  clear: both;
+  margin-left: 145px;
+  margin-top: 10px;
+  ul{
+    margin-top: 50px;
+    text-align: center;
+    li{
+      @include conSize(215px,452px);
+      float: left;
+      position: relative;
+      margin-right: 18px;
+      margin-bottom: 18px;
+    }
+    .lis{
+      display: block;
+    }
+    .tejia{
+      position: absolute;
+      right: -2px;
+      top:-2px;
+      z-index:2;
+    }
+    p{
+      background-color: #2a2a2a;
+      color: #ffffff;
+      text-align: center;
+      line-height: 20px;
+    }
+    .blank{
+      background: none;
+      width: 215px;
+      height: 20px;
+    }
+    h3{
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+    }
+    .super{
+      color: #e0070e;
+    }
+    span{
+      display: block;
+      font-size: 10px;
+      line-height: 20px;
+      color: #686868;
+      img{
+        vertical-align: middle;
+      }
+    }
+    h4{
+      font-weight: 500;
+      line-height: 24px;
+    }
+    del{
+      color: #686868;
+    }
+    button{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -55px;
+      border: none;
+      @include conSize(110px,45px,#eeeeee)
     }
   }
 }

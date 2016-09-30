@@ -56,10 +56,18 @@ $(function(){
         //设置鼠标移上效果
         $("#banner span").eq(index).addClass('current')
     }
+
 })
 $("#banner ol li").mouseenter(function(){
     $(this).children().show("fast");
 })
 $("#banner ol li").mouseleave(function(){
     $(this).children().hide()
+})
+//list移上透明度改变
+$(".list ul li").bind("mouseenter",function(){
+    $(this).fadeTo("slow",0.4);
+})
+$(".list ul li").bind("mouseleave",function(){
+    $(this).fadeTo("slow",1)
 })

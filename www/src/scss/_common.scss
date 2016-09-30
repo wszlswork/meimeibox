@@ -1,5 +1,19 @@
 //set container
-
+#sidebar{
+  @include conSize(40px,100%,#818181);
+  position: absolute;
+  right:20px;
+  z-index: 30;
+  img{
+    position: absolute;
+    top:130px;
+  }
+  .cart{
+    background: #e0070e;
+    position: absolute;
+    top:130px;
+  }
+}
 #container{
   @include conSize($container-width,auto);
   margin: 0 auto;
@@ -84,7 +98,6 @@
     @include conFloatLeft($searchtext-marginLeft,$searchtext-marginTop);
     border-color: $color-black;
     line-height:$searchtext-height ;
-    color:$searchtext-color;
     text-indent: 1em;
     font-size: $font-larger;
     background: url($searchtext-url) right no-repeat;
