@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+}
+
+img {
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main {
+  width: 940px;
+  height: 620px;
+  background-color: #ffffff;
+  margin-left: 140px;
+  margin-top: 30px;
+}
+#main .left {
+  width: 205px;
+  height: 620px;
+  background-color: #ffffff;
+  float: left;
+}
+#main .left h3 {
+  height: 40px;
+  font-weight: 400;
+  border-bottom: 1px solid #cccccc;
+}
+#main .left ul li {
+  width: 205px;
+  height: 30px;
+  background-color: #ffffff;
+  text-indent: 1em;
+  border-bottom: 1px solid #cccccc;
+  line-height: 30px;
+}
+#main .left ul a {
+  color: #000000;
+}
+#main .left ul img {
+  vertical-align: middle;
+}
+#main .right {
+  width: 705px;
+  height: 620px;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 30px;
+}
+#main .right h1 {
+  width: 700px;
+  height: 55px;
+  background-color: #ffffff;
+  margin-top: 30px;
+  border-bottom: 1px solid #cccccc;
+  color: #ff4490;
+}
+#main .right ul {
+  width: 700px;
+  height: 500px;
+  border-bottom: 1px solid #ccc;
+}
+#main .right ul a {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  color: #333333;
+}
+#main .right ul li {
+  float: left;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=list.css.map */
