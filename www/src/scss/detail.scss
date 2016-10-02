@@ -1,0 +1,214 @@
+@import "variables","util","type","mixin";
+#detail{
+  @include conSize(970px,600px);
+  margin-left: 140px;
+  margin-top: 20px;
+  .left{
+    @include conSize(430px,600px);
+    float: left;
+    position: relative;
+    .imgbox{
+      @include conSize(430px,430px);
+      position: relative;
+      span{
+        position: absolute;
+      }
+    }
+    span{
+      position: absolute;
+      display: none;
+      @include conSize(100px,100px);
+      background-color: #e0070e;
+      @include conOpacity(0.3);
+      top:0;
+      left:0;
+    }
+  }
+  ul{
+    margin-top: 20px;
+    @include conSize(430px,80px);
+    li{
+      float: left;
+      margin-right: 15px;
+      border: 1px solid #ffffff;
+      list-style: none;
+    }
+    .current{
+      border: 1px solid red;
+    }
+    img{
+      @include conSize(80px,80px);
+    }
+
+  }
+  .bigImg{
+    z-index: 10;
+    @include conSize(430px,430px);
+    display: none;
+    overflow: hidden;
+    img{
+      position:absolute;
+      @include conSize(1849px,1849px);
+    }
+    border: 2px solid #ccc;
+    position:absolute;
+    left:450px;
+    top:0;
+  }
+  .right{
+    @include  conSize(460px,600px);
+    @include conFloatLeft(50px,0);
+    h3{
+      line-height: 24px;
+    }
+    h4{
+      color: #ff243d;
+      font-weight: 500;
+    }
+    .price{
+      @include  conSize(460px,120px,#eeeeee);
+      margin-top: 50px;
+    }
+    .price p{
+      @include  conSize(80px,40px);
+      background: none;
+      line-height: 40px;
+      text-indent: 1.5em;
+      float: left;
+    }
+    .price span{
+      display: inline-block;
+      @include conSize(300px,40px);
+
+      background: none;
+      line-height: 40px;
+    }
+    .price .p_cuxiao{
+      background: none;
+      font: 900 28px/40px "宋体";
+      color:#c40000;
+    }
+    .price .yunfei{
+      background: none;
+      font: 500 16px/40px "宋体";
+      color:#b5621b;
+    }
+    .size{
+      margin-top: 10px;
+      text-indent: 1em;
+      @include  conSize(460px,30px);
+      line-height: 30px;
+      color: #838383;
+      input{
+        @include  conSize(52px,30px);
+        border: 1px solid #ccc;
+      }
+      .btn{
+        border-color:#c40000;
+      }
+    }
+    .count{
+      position: relative;
+      color: #838383;
+      @include  conSize(460px,30px);
+      margin-top: 10px;
+      text-indent: 1em;
+      input{
+          border: 1px solid #cccccc;
+        @include  conSize(40px,30px);
+        margin-left: 48px;
+      }
+      button{
+        @include conSize(16px,12px);
+        position: absolute;
+        border: 1px solid #cccccc;
+      }
+      .up{
+        @include conSize(16px,12px);
+        left:140px;
+        background: url("../images/up.jpg") no-repeat;
+      }
+      .down{
+        @include conSize(16px,14px);
+        left:140px;
+        bottom: 0;
+        background: url("../images/countdown.jpg") no-repeat;
+      }
+      span{
+        display: inline-block;
+        margin-left: 30px;
+      }
+    }
+    .btn_buy{
+      margin-top: 30px;
+      @include conSize(178px,38px,#ffeded);
+      float: left;
+      margin-left: 88px;
+      border:1px solid #e0070e;
+      color: #e0070e;
+    }
+    .btn_join{
+      margin-top: 30px;
+      @include conSize(178px,38px,#c40000);
+      float: left;
+      margin-left: 10px;
+      border:1px solid #c40000;
+      color: #ffffff;
+      img{
+        vertical-align: middle;
+      }
+      line-height:40px ;
+    }
+  }
+  .qizhi{
+    margin-top: 12px;
+    text-indent: 1.5em;
+    select{
+      border: none;
+    }
+  }
+  .priceUp{
+    @include conSize(300px,30px);
+    margin-top: 20px;
+    img{
+      display: block;
+      float: left;
+      vertical-align: middle;
+    }
+    p{
+      float: left;
+      line-height:30px ;
+      border: 1px solid #ccc;
+      border-left:none;
+      padding: 0 5px;
+    }
+    .collectstar{
+      background-color:#fcfcfc ;
+    }
+    span{
+      color: red;
+    }
+  }
+  .total{
+    @include  conSize(460px,15px);
+    color: #838383;
+    padding: 10px 0;
+    border-bottom: 1px dashed #cccccc;
+    border-top: 1px dashed #cccccc;
+    li{
+      width: 137px;
+      float: left;
+      text-align: center;
+      span{
+        color: #c40000;
+      }
+      border-right:1px solid #cccccc;
+      .span_jf{
+        color: #03e0a2;
+      }
+    }
+    .last_li{
+      border:none
+    }
+  }
+}
