@@ -45,6 +45,10 @@ a {
   border-bottom: 1px solid #cccccc;
   line-height: 30px;
 }
+#main .left ul a:hover {
+  color: red;
+  text-decoration: underline;
+}
 #main .left ul a {
   color: #000000;
 }
@@ -55,6 +59,7 @@ a {
   width: 705px;
   height: 620px;
   background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
   float: left;
   margin-left: 30px;
 }
@@ -66,9 +71,13 @@ a {
   border-bottom: 1px solid #cccccc;
   color: #ff4490;
 }
+#main .right .rightUl {
+  width: 700px;
+  height: 430px;
+}
 #main .right ul {
   width: 700px;
-  height: 500px;
+  height: 430px;
   border-bottom: 1px solid #ccc;
 }
 #main .right ul a {
@@ -78,9 +87,170 @@ a {
   color: #333333;
 }
 #main .right ul li {
+  position: relative;
   float: left;
   margin-top: 10px;
   margin-right: 5px;
+}
+#main .right .last {
+  width: 705px;
+  height: 55px;
+}
+#main .right .last p {
+  float: left;
+  line-height: 55px;
+  text-align: center;
+  margin-left: 230px;
+  margin-right: 10px;
+}
+#main .right .last li {
+  margin-top: 10px;
+  list-style: none;
+  text-align: center;
+  margin-right: 10px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-color: #cccccc;
+  line-height: 30px;
+  color: #000000;
+}
+#main .right .last .current {
+  background-color: #666666;
+}
+#main .count {
+  width: 700px;
+  height: 55px;
+  background-color: #ffffff;
+  border-bottom: 1px dashed #cccccc;
+}
+#main .count p {
+  line-height: 55px;
+  float: left;
+  margin-right: 15px;
+}
+#main .count span {
+  line-height: 55px;
+  color: #cccccc;
+}
+#main .count div {
+  width: 63px;
+  height: 33px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  float: left;
+  margin-top: 10px;
+  margin-right: 15px;
+  line-height: 33px;
+  text-align: center;
+}
+#main .count select {
+  border: none;
+}
+
+.list {
+  margin-top: 50px;
+  margin-left: 370px;
+  width: 705px;
+  height: 500px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+.list ul {
+  margin-left: 2px;
+  text-align: center;
+}
+.list ul li {
+  width: 215px;
+  height: 452px;
+  background-color: #ffffff;
+  float: left;
+  border: 2px solid #fff;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 18px;
+}
+.list ul .lis {
+  display: block;
+}
+.list ul .tejia {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  z-index: 2;
+}
+.list ul p {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+}
+.list ul .blank {
+  background: none;
+  width: 215px;
+  height: 20px;
+}
+.list ul h3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.list ul .super {
+  color: #e0070e;
+}
+.list ul span {
+  display: block;
+  font-size: 10px;
+  line-height: 20px;
+  color: #686868;
+}
+.list ul span img {
+  vertical-align: middle;
+}
+.list ul h4 {
+  font-weight: 500;
+  line-height: 24px;
+}
+.list ul del {
+  color: #686868;
+}
+.list ul button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -55px;
+  border: none;
+  width: 110px;
+  height: 45px;
+  background-color: #eeeeee;
+}
+
+.page {
+  width: 705px;
+  height: 55px;
+  margin-left: 370px;
+}
+.page p {
+  float: left;
+  line-height: 55px;
+  text-align: center;
+  margin-left: 230px;
+  margin-right: 10px;
+}
+.page li {
+  margin-top: 10px;
+  list-style: none;
+  text-align: center;
+  margin-right: 10px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-color: #cccccc;
+  line-height: 30px;
+  color: #000000;
+}
+.page .current {
+  background-color: #666666;
 }
 
 /*# sourceMappingURL=list.css.map */
