@@ -40,3 +40,40 @@ $("#detail .left ul li").mouseenter(function(){
     $("#detail .left .imgbox img").attr("src",$(this).children().first().attr("src"));
     $("#detail .left .bigImg img").attr("src",$(this).children().first().attr("src"));
 })
+//切换套餐
+$("#meal .choose").bind("click",function(){
+    $("#meal .choose").removeClass("selected");
+    $(this).addClass("selected");
+    $("#meal .combo").removeClass("show");
+    $("#meal .combo").eq($(this).index()).addClass("show")
+})
+//切换规格
+$("#detail .right .size input").click(function(){
+    $("#detail .right .size input").removeClass("btn");
+    $(this).addClass("btn");
+})
+//count加减
+$("#detail .right .count .up").click(function(){
+  var count = Number($("#detail .right .count input:text").val());
+    if(count >= 9){
+        count =9
+    }
+    $("#detail .right .count input:text").val(count+1);
+})
+$("#detail .right .count .down").click(function(){
+    var count = Number($("#detail .right .count input:text").val());
+    if(count == 1){
+        count =2
+    }
+    $("#detail .right .count input:text").val(count-1);
+
+})
+//加入购物车
+$("#detail .right .btn_join").bind("click",function(){
+    var imgSrc = $("#detail .left .imgbox img").attr("src");
+    var count =$("#detail .right .count input:text").val();
+    var pName = $("#detail .right h3").html();
+    var pRice = $("#detail .right .price .p_cuxiao").html();
+    var value = "pName"+pName+"&imgSrc:" + imgSrc + "&count:" + count + "&pRice" + pRice;
+    setCookie("goods",value,7)
+})

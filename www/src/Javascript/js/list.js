@@ -26,7 +26,7 @@ $("#main .right .last li").bind("click",function(){
     $("#main  .left ul").slideUp("slow",function(){
         $("#main  .left ul").slideDown("slow")
     })
-    $("#main  .right .currentUl").fadeOut("slow",function(){
+    $("#main  .right .currentUl").stop().fadeOut("slow",function(){
         $("#main  .right .currentUl").fadeIn(3*1000)
     })
 })
@@ -40,9 +40,11 @@ $("#main .right .last li").bind("click",function(){
     })
     //page 换页
     $(".page ul li").bind("click",function(){
-        $(".list ul").fadeOut("slow",function(){
-            $(".list ul").fadeIn(3*1000)
+        $(".list ul").stop().fadeOut("fast",function(){
+            $(".list ul").fadeIn(2*1000)
         })
+        $(".page ul li").removeClass("current")
+        $(this).addClass("current")
     })
 //$(function(){
 //    var currentUl = 0;
