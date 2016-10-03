@@ -1,0 +1,100 @@
+@import "variables","util","type","mixin";
+#goods{
+  @include conSize(1000px,50px);
+  border-bottom:2px solid #e6e6e6;
+  margin:0 auto;
+  ul{
+    @include conSize(550px,50px);
+    float:left;
+    li{
+      float:left;
+    }
+  }
+  p{
+    display:inline-block;
+    float:right;
+    margin-top:17px;
+    margin-right:15px;
+  }
+  button{
+    @include conSize(55px,25px);
+    background-color:#666;
+    float:right;
+    color:#fff;
+    border:none;
+    border-radius:2px;
+    margin-top:13px;
+  }
+  #money{
+    color:#c40000;
+    font-weight:600;
+  }
+}
+#goods ul li a{
+  display:block;
+  padding:0 30px;
+  border-right:1px solid #e8e8e8;
+  font-weight:bold;
+  font-size:16px;
+  margin-top:17px;
+  color:#3c3c3c;
+  span{
+    font-weight:600;
+    margin-left:10px;
+  }
+}
+
+
+//empty
+#empty{
+  width:1000px;
+  height:auto;
+  margin-left:130px;
+  overflow:hidden;
+  img{
+    margin:100px 30px 100px 60px; float:left;
+  }
+  p a{
+    color:#1c9eff;
+  }
+  .p1{
+    margin-top:100px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  .p2{ margin-top:15px }
+}
+#cart {
+  width:1000px;
+  height:auto;
+  overflow:hidden;
+  display: none;
+  margin:0 auto;
+  margin-bottom:40px;
+  table{
+    width:1000px;
+    height:auto;
+    border-collapse:collapse;
+    thead{ font: bold 18px/25px "宋体"; text-indent:2em}
+    td{
+      border:1px solid #ccc;
+      text-align:center;
+      padding: 15px;
+      p{
+        float:left;
+        width:180px;
+        font:14px/24px "宋体";
+        margin:10px;
+        text-align:center;
+      }
+    }
+    .pname{ width:500px;}
+  }
+}
+#cart table #add,#cart table #del{ display:block; margin:10px; width:80px; height:30px; color:#FFF; background-color:#c40000; border:none; border-radius:5px;}
+#cart table td img{
+  width:150px;
+  height:150px;
+  float:left;
+}
+

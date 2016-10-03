@@ -1,0 +1,147 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+}
+
+img {
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#goods {
+  width: 1000px;
+  height: 50px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e6e6e6;
+  margin: 0 auto;
+}
+#goods ul {
+  width: 550px;
+  height: 50px;
+  background-color: #ffffff;
+  float: left;
+}
+#goods ul li {
+  float: left;
+}
+#goods p {
+  display: inline-block;
+  float: right;
+  margin-top: 17px;
+  margin-right: 15px;
+}
+#goods button {
+  width: 55px;
+  height: 25px;
+  background-color: #ffffff;
+  background-color: #666;
+  float: right;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  margin-top: 13px;
+}
+#goods #money {
+  color: #c40000;
+  font-weight: 600;
+}
+
+#goods ul li a {
+  display: block;
+  padding: 0 30px;
+  border-right: 1px solid #e8e8e8;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 17px;
+  color: #3c3c3c;
+}
+#goods ul li a span {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+#empty {
+  width: 1000px;
+  height: auto;
+  margin-left: 130px;
+  overflow: hidden;
+}
+#empty img {
+  margin: 100px 30px 100px 60px;
+  float: left;
+}
+#empty p a {
+  color: #1c9eff;
+}
+#empty .p1 {
+  margin-top: 100px;
+  font-weight: bold;
+  font-size: 16px;
+}
+#empty .p2 {
+  margin-top: 15px;
+}
+
+#cart {
+  width: 1000px;
+  height: auto;
+  overflow: hidden;
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+#cart table {
+  width: 1000px;
+  height: auto;
+  border-collapse: collapse;
+}
+#cart table thead {
+  font: bold 18px/25px "瀹嬩綋";
+  text-indent: 2em;
+}
+#cart table td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 15px;
+}
+#cart table td p {
+  float: left;
+  width: 180px;
+  font: 14px/24px "瀹嬩綋";
+  margin: 10px;
+  text-align: center;
+}
+#cart table .pname {
+  width: 500px;
+}
+
+#cart table #add, #cart table #del {
+  display: block;
+  margin: 10px;
+  width: 80px;
+  height: 30px;
+  color: #FFF;
+  background-color: #c40000;
+  border: none;
+  border-radius: 5px;
+}
+
+#cart table td img {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+/*# sourceMappingURL=cart.css.map */

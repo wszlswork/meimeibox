@@ -70,10 +70,31 @@ $("#detail .right .count .down").click(function(){
 })
 //加入购物车
 $("#detail .right .btn_join").bind("click",function(){
-    var imgSrc = $("#detail .left .imgbox img").attr("src");
-    var count =$("#detail .right .count input:text").val();
-    var pName = $("#detail .right h3").html();
-    var pRice = $("#detail .right .price .p_cuxiao").html();
-    var value = "pName"+pName+"&imgSrc:" + imgSrc + "&count:" + count + "&pRice" + pRice;
-    setCookie("goods",value,7)
-})
+    var value = null;
+    var flag = true;
+    var $_this = $(this)
+    var cookie = getCookie("goods");
+    var cookies = cookie.split('$');
+    console.log(cookies);
+    for( var i = 0 ; i<cookies.length ; i++){
+        var values= cookies[i].split("&")
+        console.log(values[0].split(":")[1])
+        if( values[0].split(":")[1] == $("#detail .right h3").html()){
+            flag = false;
+        }
+    }
+    if( flag){
+        var imgSrc = $("#detail .left .imgbox img").attr("src");
+        var count =$("#detail .right .count input:text").val();
+        var pName = $("#detail .right h3").html();
+        var pRice = $("#detail .right .price .p_cuxiao").html();
+        value = "pName:"+pName+"&imgSrc:" + imgSrc + "&pRice:" + pRice + "&count:" + count ;
+        if(cookie == ""){
+            value = value;
+        }else{
+            value = cookie+"$" + value;
+        }
+        setCookie("goods",value,7);
+    }
+
+});

@@ -76,7 +76,7 @@ a {
   height: 430px;
 }
 #main .right ul {
-  width: 700px;
+  width: 720px;
   height: 430px;
   border-bottom: 1px solid #ccc;
 }
@@ -209,6 +209,7 @@ a {
 }
 .list ul h4 {
   font-weight: 500;
+  font-size: 14px;
   line-height: 24px;
 }
 .list ul del {
