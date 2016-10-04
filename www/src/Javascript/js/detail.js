@@ -10,12 +10,13 @@ $("#detail .left .imgbox").mousemove(function(event){
     }else if(_left >= 330){
         _left = 330;
     }
+    //边界处理
     if(_top <= 0){
         _top = 0;
     }else if(_top >= 330){
         _top = 330;
     }
-
+    //设置其位置
     $("#detail .left .imgbox span").css({
         top:_top,
         left:_left
@@ -25,6 +26,7 @@ $("#detail .left .imgbox").mousemove(function(event){
         left: -_left*4.3
     })
 })
+//鼠标移入移出的时候 span 和 bigImg显示隐藏
 $("#detail .left .imgbox").mouseleave(function(event){
     $("#detail .left .bigImg").hide()
     $("#detail .left .imgbox span").hide()
@@ -76,6 +78,7 @@ $("#detail .right .btn_join").bind("click",function(){
     var cookie = getCookie("goods");
     var cookies = cookie.split('$');
     console.log(cookies);
+    //判断是否已存在如果存在重新存取
     for( var i = 0 ; i<cookies.length ; i++){
         var values= cookies[i].split("&")
         console.log(values[0].split(":")[1])

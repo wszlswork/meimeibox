@@ -76,12 +76,13 @@ $("#submit").bind("click",function(){
         if(emailBoolen && phoneBoolen && passwordBoolen && sureBoolen){
             if($("#anwser").val()==anwser){
                 var cookie = getCookie($("#email").val());
-                console.log(cookie)
+                //console.log(cookie)
                 if(cookie!=""){
                     $("table span").eq(0).html("该用户名已使用")
                 }else{
                     var value = "Email:"+ $("#email").val()+ "&password:" + $("#password").val();
                     setCookie($("#email").val(),value,7);
+                    window.open("login.html","_self")
                 }
             }else{
                 $("div .button").parent().children().first().html("验证码输入错误");

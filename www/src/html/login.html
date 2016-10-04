@@ -5,7 +5,9 @@
     <title>登陆</title>
     <link href="../css/main.css" rel="stylesheet" type="text/css"/>
     <link href="../css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
     <script src="../Javascript/lib/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="../Javascript/lib/jquery-ui.js" type="text/javascript"></script>
     <script src="../Javascript/js/util.js" type="text/javascript"></script>
 </head>
 <body>
@@ -15,20 +17,6 @@
         <img src="../images/sidebar.jpg" class="tag">
         <div class="cart"></div>
     </div>
-    <!--弹框-->
-    <div id="bounced">
-        <img class="close" src="../images/x.jpg"/>
-        <h1>
-            快来揭开K-BEAUTY的内幕
-        </h1>
-        <h2>
-            了解更多韩国美妆产品
-        </h2>
-        <img src="../images/memebox.jpg" class="memebox"/>
-        <input type="text" placeholder="请填写您的邮箱">
-        <input type="text" placeholder="请填写您的手机号码">
-        <button>加入我们</button>
-    </div>
     <!--左侧广告-->
     <div id="ad">
         <ul>
@@ -37,10 +25,6 @@
             <li><img src="../images/gift.jpg"/></li>
             <li><img src="../images/preference.jpg"/></li>
         </ul>
-    </div>
-    <!--侧边栏-->
-    <div id=sidebar"">
-
     </div>
     <!--头部-->
     <div id="header">
@@ -55,16 +39,16 @@
             连续10天送5元代金券
         </p>
         <ul>
-            <li><a href="#">登陆</a></li>
-            <li><a href="#">免费注册</a></li>
+            <li><a href="login.html">登陆</a></li>
+            <li><a href="register.html">免费注册</a></li>
             <li><a href="#">美妆箱</a></li>
-            <li class="bag"><a href="#"><img src="../images/top-bag.jpg"/>购物车</a></li>
+            <li class="bag"><a href="cart.html"><img src="../images/top-bag.jpg"/>购物车</a></li>
         </ul>
     </div>
     <!--search搜索框-->
     <div id="search">
         <div class="logo"></div>
-        <input type="text" class="searchtext" value="搜索!"/>
+        <input type="text" class="searchtext" id="tags" placeholder="搜索!"/>
         <div class="btnsearch"></div>
         <ul>
             <li><a href="#">PONY</a></li>
@@ -85,7 +69,7 @@
     <!--菜单-->
     <div id="menu">
         <ul>
-            <li><a href="#">美美箱主页</a></li>
+            <li><a href="../index.html">美美箱主页</a></li>
             <li class="more">
                 <a href="#">美美爆款 <img src="../images/down.jpg"/></a><img class="bubble" src="../images/Hot.jpg"/>
                 <div class="hot">

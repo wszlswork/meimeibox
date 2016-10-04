@@ -142,5 +142,5 @@ $(".list ul li button").live("click",function(){
         }
         setCookie("goods",value,7);
     }
-
+    window.open("cart.html")
 });

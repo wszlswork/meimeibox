@@ -17,7 +17,7 @@ $("#login").on("click",function(){
             var value = cookie.split("&");
             //console.log(value)
             var password = value[1].split(":")[1]
-            alert(password)
+            //alert(password)
             if($("#password").val() == password){
                 $("#password").prev().html("密码<span>*</span>")
                 window.open("../index.html","_self")
@@ -25,16 +25,5 @@ $("#login").on("click",function(){
                 $("#password").prev().html("<span>密码不正确</span>")
             }
         }
-})
-//close弹框
-$(function() {
-    $("#bounced .close").click(function(){
-        $("#container").css({
-            "background":"#fff",
-            "opacity":"1",
-            "filter": "100"
-        })
-        $("#bounced").hide()
-    })
 })
 

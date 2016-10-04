@@ -71,3 +71,7 @@ $(".list ul li").bind("mouseenter",function(){
 $(".list ul li").bind("mouseleave",function(){
     $(this).fadeTo("slow",1)
 })
+//加入会员
+$("#newPerson button").bind("click",function(){
+    window.open("html/register.html","_self")
+})
