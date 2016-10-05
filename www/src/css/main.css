@@ -29,26 +29,53 @@ a {
   text-decoration: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #sidebar {
   width: 40px;
   height: 100%;
   background-color: #818181;
   position: absolute;
-  right: 20px;
+  right: 0px;
   z-index: 30;
 }
-#sidebar img {
+#sidebar #tocart {
+  width: 40px;
+  height: 120px;
+  background-color: #ffffff;
   position: absolute;
   top: 130px;
 }
-#sidebar .cart {
-  background: #e0070e;
+#sidebar #personCenter {
+  width: 40px;
+  height: 135px;
+  background-color: #ffffff;
   position: absolute;
-  top: 130px;
+  background: url("../images/personCenter.jpg") no-repeat;
+  top: 300px;
+}
+#sidebar #personCenter ul {
+  width: 40px;
+  height: 150px;
+  background-color: none;
+}
+#sidebar #personCenter ul li {
+  width: 40px;
+  height: 40px;
+  background-color: none;
+  margin-bottom: 5px;
+  position: relative;
+}
+#sidebar #personCenter ul li img {
+  position: absolute;
+  left: -200px;
+  display: none;
 }
 
 #container {
-  width: 1222px;
+  width: 100%;
   height: auto;
   background-color: #ffffff;
   margin: 0 auto;
@@ -65,25 +92,24 @@ a {
 }
 
 #header {
-  width: 1222px;
+  width: 100%;
   height: 60px;
-  background-color: #ffffff;
-  background: url("../images/header-bck.jpg") no-repeat;
+  background-color: #fccdd2;
+  background: #fccdd2 url("../images/header-bck.jpg") no-repeat;
   position: relative;
 }
 #header .closeheader {
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
-  opacity: 0;
-  filter: alpha(opacity=0);
+  background-color: #fccdd2;
+  z-index: 1;
   position: absolute;
-  right: 50px;
-  top: 8px;
+  right: 93px;
+  top: 7px;
 }
 
 #top {
-  width: 1222px;
+  width: 100%;
   height: 36px;
   background-color: #ffffff;
   border-bottom: 1px solid #dcdcdc;
@@ -131,7 +157,7 @@ a {
 }
 
 #search {
-  width: 1222px;
+  width: 100%;
   height: 166px;
   background-color: #ffffff;
   position: relative;
@@ -169,7 +195,7 @@ a {
   filter: alpha(opacity=0);
 }
 #search ul {
-  width: 422px;
+  width: 500px;
   height: 25px;
   background-color: #ffffff;
   float: left;
@@ -217,7 +243,7 @@ a {
 }
 
 #menu {
-  width: 1222px;
+  width: 100%;
   height: 52px;
   background-color: #ffffff;
   position: relative;
@@ -279,7 +305,7 @@ a {
 }
 
 #friendlink {
-  width: 1222px;
+  width: 100%;
   height: 233px;
   background-color: #ffffff;
   background: url("../images/friend-bck.jpg") repeat;
@@ -290,7 +316,7 @@ a {
   height: 192px;
   background-color: #ffffff;
   float: left;
-  margin-left: 130px;
+  margin-left: 170px;
   margin-top: 30px;
 }
 #friendlink .link ul {
@@ -337,7 +363,7 @@ a {
 }
 
 #footer {
-  width: 1222px;
+  width: 100%;
   height: 95px;
   background-color: #ebebeb;
   position: relative;

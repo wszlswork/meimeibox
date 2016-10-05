@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+}
+
+img {
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-left: 140px;
+  margin-top: 50px;
+}
+
+h3 {
+  margin-left: 140px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+#main {
+  width: 940px;
+  height: auto;
+  background-color: #ffffff;
+  margin-left: 140px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#address {
+  width: 300px;
+  height: 630px;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  float: left;
+  text-indent: 1em;
+}
+#address select {
+  text-indent: 1em;
+}
+#address input {
+  text-indent: 1em;
+}
+#address .top {
+  width: 300px;
+  height: 46px;
+  background-color: #e13b91;
+  background: #e13b91 url("../images/home.jpg") no-repeat;
+  text-indent: 85px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 46px;
+}
+#address p {
+  line-height: 30px;
+  margin-top: 10px;
+}
+#address .creatAdress {
+  display: block;
+  margin-top: 5px;
+  width: 272px;
+  height: 24px;
+  background-color: #ffffff;
+  margin-left: 12px;
+}
+#address table {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#address table td {
+  text-indent: 0em;
+  font-weight: 800;
+  line-height: 24px;
+}
+#address table td span {
+  color: #e0070e;
+}
+#address table td input {
+  width: 120px;
+  height: 24px;
+  background-color: #ffffff;
+}
+#address .phone {
+  font-weight: 800;
+  line-height: 24px;
+}
+#address .phone span {
+  color: #e0070e;
+}
+#address .phone a {
+  display: inline-block;
+  float: right;
+  color: #e0070e;
+  margin-right: 12px;
+  text-decoration: underline;
+}
+#address .inputPhone {
+  width: 260px;
+  height: 24px;
+  background-color: #ffffff;
+  margin-left: 12px;
+}
+#address #city select {
+  width: 272px;
+  height: 24px;
+  background-color: #ffffff;
+  margin-left: 12px;
+}
+#address #saveaddress {
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+#emsmessage {
+  width: 624px;
+  height: 750px;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 10px;
+}
+#emsmessage #ems {
+  width: 301px;
+  height: 115px;
+  background-color: #ffffff;
+  float: left;
+  background: url("../images/ems.jpg");
+}
+#emsmessage #payfor {
+  width: 300px;
+  height: 168px;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  float: left;
+  margin-left: 10px;
+}
+#emsmessage #payfor .pay {
+  width: 300px;
+  height: 42px;
+  background-color: #e13b91;
+  background: #e13b91 url("../images/pay.jpg") no-repeat;
+  text-indent: 85px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 46px;
+}
+#emsmessage #payfor .cash {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#emsmessage #payfor .zhifu {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#emsmessage #payfor p {
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #ff0000;
+}
+#emsmessage #accounts {
+  width: 616px;
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+#emsmessage #accounts .pay {
+  width: 616px;
+  height: 42px;
+  background-color: #e13b91;
+  background: #e13b91 url("../images/shoplist.jpg") no-repeat;
+  text-indent: 85px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 46px;
+}
+#emsmessage #accounts table {
+  width: 616px;
+  height: 88px;
+  background-color: #fbfbfb;
+  background-color: #fbfbfb;
+  padding: 10px;
+  border-collapse: collapse;
+}
+#emsmessage #accounts table th {
+  text-align: left;
+  text-indent: 2em;
+  line-height: 40px;
+}
+#emsmessage #accounts table td {
+  text-indent: 1em;
+}
+#emsmessage #accounts table span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #9f9f9f;
+  float: left;
+  color: #ffffff;
+  text-indent: 0em;
+  text-align: center;
+  line-height: 40px;
+}
+#emsmessage #accounts table p {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+}
+#emsmessage .discount {
+  width: 616px;
+  height: 140px;
+  background-color: #ffffff;
+}
+#emsmessage .discount p {
+  width: 616px;
+  height: 40px;
+  background-color: #ffffff;
+  float: right;
+  text-align: right;
+}
+#emsmessage .discount span {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 24px;
+}
+#emsmessage .coupon {
+  width: 616px;
+  height: 120px;
+  background-color: #fbfbfb;
+}
+#emsmessage .coupon h3 {
+  margin-left: 10px;
+}
+#emsmessage .coupon input {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 283px;
+  height: 30px;
+  background-color: #ffffff;
+  display: block;
+}
+#emsmessage .coupon button {
+  margin-top: 10px;
+  width: 110px;
+  height: 30px;
+  background-color: #e13b91;
+  margin-left: 10px;
+  color: white;
+  border: none;
+}
+#emsmessage #sure {
+  width: 380px;
+  height: 45px;
+  background-color: #e13b91;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  border: none;
+}
+#emsmessage .last {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: #ff243d;
+}
+
+/*# sourceMappingURL=indent.css.map */

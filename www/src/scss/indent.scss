@@ -1,0 +1,219 @@
+@import "variables","util","type","mixin";
+h1{
+  margin-left: 140px;
+  margin-top: 50px;
+}
+h3{
+  margin-left: 140px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#main{
+  @include conSize(940px,auto);
+  margin-left: 140px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+#address{
+  @include conSize(300px,630px,#fbfbfb);
+  border: 1px solid #ccc;
+  float: left;
+  select{
+    text-indent: 1em;
+  }
+  input{
+    text-indent: 1em;
+  }
+  .top{
+    @include conSize(300px,46px,#e13b91);
+    background:#e13b91 url("../images/home.jpg") no-repeat;
+    text-indent: 85px;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 46px;
+  }
+  text-indent: 1em ;
+  p{
+    line-height: 30px;
+    margin-top: 10px;
+  }
+  .creatAdress{
+    display: block;
+    margin-top: 5px;
+    @include  conSize(272px,24px);
+    margin-left: 12px;
+  }
+  table{
+    margin-top: 10px;
+    margin-left: 10px;
+    td{
+      text-indent: 0em;
+      font-weight: 800;
+      line-height: 24px;
+      span{
+        color: #e0070e;
+      }
+      input{
+        @include  conSize(120px,24px);
+      }
+    }
+  }
+  .phone{
+    font-weight: 800;
+    line-height: 24px;
+    span{
+      color: #e0070e;
+    }
+    a{
+      display: inline-block;
+      float: right;
+      color: #e0070e;
+      margin-right: 12px;
+      text-decoration: underline;
+    }
+  }
+  .inputPhone{
+    @include  conSize(260px,24px);
+    margin-left: 12px;
+  }
+  #city{
+    select{
+      @include  conSize(272px,24px);
+      margin-left: 12px;
+    }
+  }
+  #saveaddress{
+    margin-left: 12px;
+    margin-top: 12px;
+  }
+}
+#emsmessage{
+  @include conSize(624px,750px);
+  float: left;
+  margin-left: 10px;
+  #ems{
+    @include conSize(301px,115px);
+    float: left;
+    background: url("../images/ems.jpg");
+  }
+  #payfor{
+    @include conSize(300px,168px,#fbfbfb);
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 10px;
+    .pay{
+      @include conSize(300px,42px,#e13b91);
+      background:#e13b91 url("../images/pay.jpg") no-repeat;
+      text-indent: 85px;
+      color: #ffffff;
+      font-weight: 800;
+      line-height: 46px;
+    }
+    .cash{
+      margin-top:20px;
+      margin-left: 10px;
+    }
+    .zhifu{
+      margin-top:10px;
+      margin-left: 10px;
+    }
+    p{
+      margin-left: 10px;
+      margin-top: 10px;
+      color: #ff0000;
+    }
+  }
+  #accounts {
+    @include conSize(616px, auto);
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    .pay {
+      @include conSize(616px, 42px, #e13b91);
+      background: #e13b91 url("../images/shoplist.jpg") no-repeat;
+      text-indent: 85px;
+      color: #ffffff;
+      font-weight: 800;
+      line-height: 46px;
+    }
+    table {
+      @include conSize(616px, 88px, #fbfbfb);
+      background-color: #fbfbfb;
+      padding: 10px;
+      border-collapse: collapse;
+
+      th {
+        text-align: left;
+        text-indent: 2em;
+        line-height: 40px;
+      }
+      td {
+        text-indent: 1em;
+      }
+      span {
+        display: inline-block;
+        @include conSize(40px, 40px, #9f9f9f);
+        float: left;
+        color: #ffffff;
+        text-indent: 0em;
+        text-align: center;
+        line-height: 40px;
+      }
+      p {
+        @include conSize(40px, 40px);
+        display: inline-block;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+      }
+    }
+  }
+  .discount{
+    @include conSize(616px, 140px);
+    p{
+      @include  conSize(616px, 40px);
+      float: right;
+      text-align: right;
+    }
+    span{
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      line-height: 24px;
+    }
+  }
+  .coupon{
+    @include conSize(616px, 120px,#fbfbfb);
+    h3{
+      margin-left: 10px;
+    }
+    input{
+      margin-left: 10px;
+      margin-top: 10px;
+      @include conSize(283px,30px);
+      display: block;
+    }
+    button{
+      margin-top: 10px;
+      @include conSize(110px,30px,#e13b91);
+      margin-left: 10px;
+      color: white;
+      border: none;
+    }
+  }
+  #sure{
+    @include conSize(380px,45px,#e13b91);
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    border:none;
+  }
+  .last{
+    margin-left: 10px;
+    margin-top: 20px;
+    color:#ff243d ;
+  }
+}

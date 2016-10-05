@@ -48,7 +48,7 @@ var utility = {
 					//console.log(typeof successFn);  //function
 					if(typeof successFn == "function"){
 						//将服务器端的响应信息作为实参进行传递
-						successFn(req.responseText);	
+						successFn(req.responseText);
 					}
 				}
 			};
@@ -65,39 +65,6 @@ function getStyle(obj,att){
 		return obj.currentStyle[att];
 	}else{
 		return getComputedStyle(obj,null)[att];
-	}
-}
-//移动元素
-function startMove(obj,json,fn){
-	//alert(1);
-	clearInterval(obj.timer);
-	obj.timer = setInterval(show,100);
-	function show(){
-		for(var att in json){ //att表示json对象中属性的名称
-			var _value;
-			if(att == "opacity"){
-				_value = parseInt(getStyle(obj,att) * 100);
-			}else{
-				_value = parseInt(getStyle(obj,att));	
-			}
-			var speed = (json[att] - _value) / 10;  
-			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-			if(_value == json[att]){
-				clearInterval(obj.timer);
-				if(fn){ //当fn没有具体值时，则fn为false,否则为true
-					fn();
-				}
-			}else{
-				if(att == "opacity"){
-					obj.style[att] = (_value + speed) / 100;
-					obj.style.filter = "alpha(opacity="+(_value + speed)+")";
-					console.log(_value)
-				}else{
-					obj.style[att] = _value + speed + "px";
-					console.log(obj.style[att])
-				}
-			}
-		}
 	}
 }
 //获取随机数

@@ -1,17 +1,35 @@
 //set container
+body{
+  overflow-x: hidden;
+}
 #sidebar{
   @include conSize(40px,100%,#818181);
   position: absolute;
-  right:20px;
+  right:0px;
   z-index: 30;
-  img{
+  #tocart{
+    @include conSize(40px,120px);
     position: absolute;
     top:130px;
   }
-  .cart{
-    background: #e0070e;
+  #personCenter{
+    @include conSize(40px,135px);
     position: absolute;
-    top:130px;
+    background: url("../images/personCenter.jpg") no-repeat;
+    top:300px;
+    ul{
+      @include conSize(40px,150px,none);
+      li{
+        @include conSize(40px,40px,none);
+        margin-bottom: 5px;
+        position: relative;
+      }
+     li img{
+        position: absolute;
+        left:-200px;
+       display: none;
+      }
+    }
   }
 }
 #container{
@@ -33,15 +51,16 @@
 
 //set header
 #header{
-  @include conSize($container-width,$header-height);
-  background: url($header-url) no-repeat;
+  @include conSize($container-width,$header-height,#fccdd2);
+  //margin-left: 40px;
+  background: #fccdd2 url($header-url) no-repeat;
   position:relative;
   .closeheader{
-    @include conSize($header-closeheader-width,$header-closeheader-height);
-    @include conOpacity(0);
+    @include conSize($header-closeheader-width,$header-closeheader-height,#fccdd2);
+    z-index: 1;
     position: absolute;
-    right:$closeheader-right;
-    top:$closeheader-top;
+    right:93px;
+    top:7px;
     @extend %hand;
   }
 }
@@ -111,7 +130,7 @@
     @extend %hand;
   }
   ul{
-    @include conSize($searchtext-width,$searchtul-height);
+    @include conSize(500px,$searchtul-height);
     @include conFloatLeft($searchtext-marginLeft);
     li{
       @include conFloatLeft();
@@ -216,7 +235,7 @@
 }
 #friendlink .link{
   @include conSize(960px,192px);
-  @include conFloatLeft(130px,30px);
+  @include conFloatLeft(170px,30px);
   ul{
     margin-top: 10px;
     float: left;

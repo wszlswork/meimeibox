@@ -4,7 +4,7 @@
 $(function(){
     var cookie = getCookie("goods");
     //如果有商品
-    if(cookie != "") {
+    if(cookie) {
         var $img = null;
         var $pname = null;
         var $price = null;
@@ -15,18 +15,17 @@ $(function(){
         //切割每一个商品
         var cookies = cookie.split("$");
         //重新写入全部商品
-        Whole()
+        Whole();
         //console.log(cookies)
         for( var i = 0 ; i<cookies.length; i++ ) {
             //切割某一个商品的每一个信息
-            var _values = cookies[i].split("&")
+            var _values = cookies[i].split("&");
             //console.log(_values.length)
             //创建一个tr加入到table
-            var $tr = $("<tr></tr>")
+            var $tr = $("<tr></tr>");
             $("#cart table").append($tr);
-            for (var j = 0; j < _values.length; j++) {
-                var _infos = _values[j].split(":");
-                //console.log(_infos[1])
+            for (var k = 0; k < _values.length; k++) {
+                var _infos = _values[k].split(":");
                 //获取每一个值添加到元素中
                 switch (_infos[0]) {
                     case "imgSrc":
@@ -44,26 +43,23 @@ $(function(){
                         break;
                 }
             }
-            for (var j = 0; j < 5; j++) {
+            for (var n = 0; n < 5; n++) {
                 //创建td
                 var $td = $('<td></td>');
                 $tr.append($td);
-                if (j == 0) {
+                if (n === 0) {
                     $input=("<input type='checkbox'/>");
                     $td.append($img);
                     $td.append($pname);
                     $td.append($input);
-                } else if (j == 1) {
+                } else if (n == 1) {
                     $td.html($price);
-                } else if (j == 2) {
+                } else if (n == 2) {
                     $td.html($count);
-                } else if (j == 3) {
-                    $td.addClass("total")
+                } else if (n == 3) {
+                    $td.addClass("total");
                     var total1="￥" + parseInt($price.split("￥")[1]) * parseInt($count);
                     $td.html(total1);
-                    //sum += parseInt($price.split("￥")[1]) * parseInt($count);
-                    //console.log(sum) ;
-                   //money.innerHTML = parseInt(price.split("￥")[1]) * parseInt(count)
                 }else{
                     var $btn1= $("<button id='add'>增加</button>");
                     $td.append($btn1);
@@ -74,13 +70,13 @@ $(function(){
         }
     }
     $("#allselect").attr("checked",false);
-})
+});
 //增加事件
 $("#add").live("click",function(){
     //var total = 0;
     //获取数量
    var $tdCount =  $(this).parent().parent().children().eq(2);
-    $tdCount.html(parseInt($tdCount.html())+1)
+    $tdCount.html(parseInt($tdCount.html())+1);
     //获取单个间隔
     var $tdPrice = $(this).parent().parent().children().eq(3);
     var price = parseInt($tdPrice.html().split("￥")[1]);
@@ -89,14 +85,14 @@ $("#add").live("click",function(){
     //计算价格
     $tdPrice.html("￥"+(parseInt($tdCount.html()))*($(this).parent().parent().children().eq(1).html().split("￥")[1]));
     Sum();
-    writeCookie( parseInt($tdCount.html()),_name)
-})
+    writeCookie( parseInt($tdCount.html()),_name);
+});
 $("#del").live("click",function(){
-    var $this = $(this)
+    var $this = $(this);
     //获取数量
     var $tdCount =  $(this).parent().parent().children().eq(2);
     //改变数量
-    $tdCount.html(parseInt($tdCount.html())-1)
+    $tdCount.html(parseInt($tdCount.html())-1);
     var $tdPrice = $(this).parent().parent().children().eq(3);
     //获取单价
     var price = parseInt($tdPrice.html().split("￥")[1]);
@@ -112,7 +108,7 @@ $("#del").live("click",function(){
             var cookie = getCookie("goods");
             var cookies = cookie.split("$");
             for( var i = 0 ; i<cookies.length; i++ ) {
-                var _values = cookies[i].split("&")
+                var _values = cookies[i].split("&");
                 for (var j = 0; j < _values.length; j++) {
                     var _infos = _values[j].split(":");
                     if(_infos[0] == "pName"){
@@ -124,43 +120,43 @@ $("#del").live("click",function(){
                 }
             }
             var value = null;
-            for(var i = 0 ; i<cookies.length; i++ ){
-                if( num != 0 ) {
-                    if (i == 0) {
-                        value = cookies[0]
+            for(var m = 0 ; m<cookies.length; m++ ){
+                if( num ) {
+                    if (m === 0) {
+                        value = cookies[0];
                     } else {
-                        if (i != num) {
-                            value += "$" + cookies[i];
+                        if (m != num) {
+                            value += "$" + cookies[m];
                         }
                     }
                 }else{
-                    if( i == 1){
-                        value = cookies[1]
-                    }else if(i>1){
+                    if( m == 1){
+                        value = cookies[1];
+                    }else if(m>1){
                         value += "$" + cookies[i];
                     }
                 }
             }
-            if(value!=null){
+            if(value){
                 setCookie("goods",value,7);
             }else{
-                removeCookie("goods")
+                removeCookie("goods");
             }
 
         }else{
             $tdCount.html("1");
-            $tdPrice.html("￥"+(parseInt($tdCount.html()))*($(this).parent().parent().children().eq(1).html().split("￥")[1]))
+            $tdPrice.html("￥"+(parseInt($tdCount.html()))*($(this).parent().parent().children().eq(1).html().split("￥")[1]));
         }
 
     }
     //获取要改变的那个商品的那一条cookie
-    var _name = $(this).parent().parent().children().eq(0).children().eq(1).html();
+    var _name1 = $(this).parent().parent().children().eq(0).children().eq(1).html();
     //数量改变时写入cookie
-    writeCookie( parseInt($tdCount.html()),_name)
+    writeCookie( parseInt($tdCount.html()),_name1);
     //改变全部商品个数
     Whole();
     Sum();
-})
+});
 //复选框中的改变事件
 $("#cart table td input:checkbox").live("click",function(){
     //遍历每一个
@@ -172,10 +168,10 @@ $("#cart table td input:checkbox").live("click",function(){
         }else if($(this).is(":checked")){//如果都选中了全选勾上
             $("#allselect").attr("checked",true);
         }
-    })
+    });
 
     Sum();
-})
+});
 //全选事件
 $("#allselect").live("click",function(){
     //如果选中全选框则全部选中否则全部不选计算结果
@@ -186,13 +182,13 @@ $("#allselect").live("click",function(){
         $("#cart table td input:checkbox").attr("checked",false);
         Sum();
     }
-})
+});
 //计算总和
 function Sum(){
     var sum = 0;
     $("#cart table td input:checked").each(function(){
-        sum += parseInt($(this).parent().parent().children().eq(3).html().split("￥")[1])
-    })
+        sum += parseInt($(this).parent().parent().children().eq(3).html().split("￥")[1]);
+    });
     $("#money").html("￥"+sum);
 }
 //数量改变时写入cookie
@@ -233,8 +229,8 @@ function writeCookie(_count,_name){
                 cookies[i] = "pName:"+pName+"&imgSrc:" + imgSrc + "&pRice:" + pRice + "&count:" + count ;
             }
         }
-        if (i == 0) {
-            value = cookies[0]
+        if (i === 0) {
+            value = cookies[0];
         } else{
             value += "$" + cookies[i];
         }
@@ -243,9 +239,9 @@ function writeCookie(_count,_name){
 }
 //全部商品的个数
 function Whole(){
-    var cookie = getCookie("goods")
-    if( cookie !=""){
-        var cookies = cookie.split("$")
+    var cookie = getCookie("goods");
+    if( cookie ){
+        var cookies = cookie.split("$");
         //console.log(cookies.length)
         $("#whole").html(cookies.length);
     }else{
@@ -253,3 +249,14 @@ function Whole(){
         window.location.reload();
     }
 }
+//移到侧边购物车事件
+$("#sidebar #tocart").bind("mouseenter",function(){
+    $(this).children().attr("src","../images/redcart.jpg");
+});
+$("#sidebar #tocart").bind("mouseleave",function(){
+    $(this).children().attr("src","../images/blackcart.jpg");
+});
+//tocart
+$("#sidebar #tocart").bind("click",function(){
+    window.open("cart.html");
+});
